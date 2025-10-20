@@ -56,13 +56,13 @@ En resumen, el proyecto combina captura de imágenes, grabación de audio y gest
   </tr>
   <tr>
     <th>
-      <img src="img/estilos.jpg" alt="Prueba" width="300" />
+      <img src="img/estilos.jpeg" alt="Prueba" width="300" />
     </th>
     <th>
-      <img src="img/estilos1.jpg" alt="Prueba" width="300" />
+      <img src="img/estilos1.jpeg" alt="Prueba" width="300" />
     </th>
     <th>
-      <img src="img/estilos2.jpg" alt="Prueba" width="300" />
+      <img src="img/estilos2.jpeg" alt="Prueba" width="300" />
     </th>
   </tr>
 </table>
@@ -75,10 +75,10 @@ En resumen, el proyecto combina captura de imágenes, grabación de audio y gest
 
 ---
 ## Ejemplo de Uso
-<p>La aplicación está diseñada con una arquitectura basada en fragmentos. CamaraFragment gestiona la captura de fotos, incluyendo funcionalidades de flash, cambio de cámara y temporizador. AudioFragment permite la grabación de audio, reproducción, y la gestión de archivos mediante opciones para renombrar, eliminar y compartir. GaleriaFragment se encarga de mostrar las imágenes almacenadas en la galería utilizando un diseño de cuadrícula.</p>
-<table>
+<p align="justify">La aplicación está diseñada con una arquitectura basada en fragmentos. CamaraFragment gestiona la captura de fotos, incluyendo funcionalidades de flash, cambio de cámara y temporizador. AudioFragment permite la grabación de audio, reproducción, y la gestión de archivos mediante opciones para renombrar, eliminar y compartir. GaleriaFragment se encarga de mostrar las imágenes almacenadas en la galería utilizando un diseño de cuadrícula.</p>
+<table style="margin-left: auto; margin-right: auto;">
   <tr>
-    <th>Cámara</th>
+    <th colspan="2" style="text-align: center;">Cámara</th>
   </tr>
   <tr>
     <th>
@@ -89,10 +89,10 @@ En resumen, el proyecto combina captura de imágenes, grabación de audio y gest
     </th>
   </tr>
 </table>
-<p>Para el almacenamiento de archivos se utiliza la carpeta específica Music/Grabaciones para los audios y Pictures/Practica3 para las fotos, integrándose con el sistema de MediaStore para visibilidad en la galería del dispositivo.</p>
-<table>
+<p align="justify">>Para el almacenamiento de archivos se utiliza la carpeta específica Music/Grabaciones para los audios y Pictures/Practica3 para las fotos, integrándose con el sistema de MediaStore para visibilidad en la galería del dispositivo.</p>
+<table style="margin-left: auto; margin-right: auto;">
   <tr>
-    <th>Galería</th>
+    <th colspan="2" style="text-align: center;">Galería</th>
   </tr>
   <tr>
     <th>
@@ -109,10 +109,10 @@ En resumen, el proyecto combina captura de imágenes, grabación de audio y gest
     </th>
   </tr>
 </table>
-<p>La aplicación implementa una funcionalidad de grabación y reproducción de audio utilizando componentes nativos de Android. Para capturar sonido se usa la clase MediaRecorder configurada con el micrófono del dispositivo como fuente de audio, por lo que es necesario solicitar el permiso RECORD_AUDIO al usuario. Las grabaciones se almacenan en el almacenamiento interno accesible mediante getExternalFilesDir dentro de la carpeta Music/Grabaciones, lo que evita requerir permisos de almacenamiento en versiones modernas de Android. Para reproducir los audios grabados se utiliza MediaPlayer, permitiendo iniciar, pausar, reanudar y buscar dentro de la pista mediante una barra de progreso. La duración de cada archivo se obtiene usando MediaMetadataRetriever. Además, se implementan opciones para renombrar, eliminar y compartir los archivos de audio, empleando FileProvider para generar URIs seguras durante la acción de compartir. En resumen, el módulo de audio hace uso directo del micrófono, gestiona archivos locales de forma segura y ofrece control completo de reproducción y administración de grabaciones.</p>
-<table>
+<p align="justify">>La aplicación implementa una funcionalidad de grabación y reproducción de audio utilizando componentes nativos de Android. Para capturar sonido se usa la clase MediaRecorder configurada con el micrófono del dispositivo como fuente de audio, por lo que es necesario solicitar el permiso RECORD_AUDIO al usuario. Las grabaciones se almacenan en el almacenamiento interno accesible mediante getExternalFilesDir dentro de la carpeta Music/Grabaciones, lo que evita requerir permisos de almacenamiento en versiones modernas de Android. Para reproducir los audios grabados se utiliza MediaPlayer, permitiendo iniciar, pausar, reanudar y buscar dentro de la pista mediante una barra de progreso. La duración de cada archivo se obtiene usando MediaMetadataRetriever. Además, se implementan opciones para renombrar, eliminar y compartir los archivos de audio, empleando FileProvider para generar URIs seguras durante la acción de compartir. En resumen, el módulo de audio hace uso directo del micrófono, gestiona archivos locales de forma segura y ofrece control completo de reproducción y administración de grabaciones.</p>
+<table style="margin-left: auto; margin-right: auto;">
   <tr>
-    <th>Audio</th>
+    <th colspan="3" style="text-align: center;">Audio</th>
   </tr>
   <tr>
     <th>
