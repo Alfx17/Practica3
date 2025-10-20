@@ -1,4 +1,4 @@
-<h1 align="center">Práctica 3: Aplicación Móvil Básica</h1>
+<h1 align="center">Práctica 3: Aplicaciones Nativas</h1>
 
 ---
 
@@ -10,7 +10,7 @@
 ---
 
 ## Índice
-- [Título](#practica-2--aplicacion-movil-basica)
+- [Título](#practica-3-aplicacion-movil-nativa)
 - [Insignias](#insignias)
 - [Índice](#índice)
 - [Objetivo](#objetivo)
@@ -28,41 +28,27 @@
 ---
 
 ## Objetivo
-<p align="justify">El objetivo de esta práctica es implementar la persistencia de datos a través de SharedPreferences para guardar las preferencias del usuario. Específicamente, añadirán una funcionalidad que permita al usuario seleccionar y aplicar un tema visual (claro u oscuro) a la aplicación, asegurando que esta elección se mantenga entre diferentes sesiones de uso.
+<p align="justify">Desarrollar aplicaciones móviles nativas para Android que interactúen directamente con los recursos del dispositivo, implementando el concepto y funcionalidad de las aplicaciones nativas.
 </p>
 
 ---
 
 ## Descripción del proyecto
-<p align="justify">Esta aplicación de Android contiene un Activity principal en el que se muestran los diferentes países de América. En dicha pantalla se encuentran una serie de botones sobre algunos de los países, que al ser seleccionados nos llevarán a otro activity, el cuál contendrá un mapa de mayor tamaño del país. Los países disponibles se listan a continuación:</p>
-<ul>
-  <li>Alaska</li>
-  <li>Groenlandia</li>
-  <li>Canadá</li>
-  <li>Estados Unidos de América</li>
-  <li>México</li>
-  <li>Venezuela</li>
-  <li>Colombia</li>
-  <li>Perú</li>
-  <li>Brasil</li>
-  <li>Argentina</li>
-  
-</ul>
+<p align="justify">En esta aplicación se implementó una cámara que permite tomar fotos con el uso de flash, temporizador y cámara frontal y trasera, también se implementó un galería que me permite guardar las fotos que fueron tomadas. En la galería se pueden ver detalles acerca de las fotos y algunas opciones para editar. Se integró un grabador de audio que permite grabarlos, almacenarlos, renombrarlos y eliminarlos si el usuario así lo desea.</p>
+
 <p align="center">
   <img src="fondo/America.jpeg" alt="Prueba" width="300"/>
 </p>
-<p align="justify">Cada uno de los países tiene un activity, en el que se muestran por lo menos 1 de los lugares turísticos más emblemáticos del país. Cada uno de esos lugares tiene una imagen represenatativa, la cual funciona como un botón, que al darle click me envía a otro activity, en el que se mostrará un pequeño resúmen del lugar y un video representativo. En este activity tenemos la opción de regresar al mapa de América con el botón que se encuentra en la parte inferior del activity.</p>
+<p align="justify">Este proyecto requiere Android Studio versión Bumblebee o superior, con soporte para Kotlin y Material3. El SDK mínimo necesario es la versión 24 (Android 7.0), mientras que la versión objetivo recomendada es la 33. Se utiliza Gradle 7.0 o superior, con dependencias de CameraX para la gestión de la cámara, MediaRecorder y MediaPlayer para grabación y reproducción de audio, y RecyclerView para la presentación de listas de elementos.
 
-<p align="center">
-  <img src="fondo/Mexico.jpeg" alt="Prueba" width="300" />
-</p>
+La aplicación está diseñada con una arquitectura basada en fragmentos. CamaraFragment gestiona la captura de fotos, incluyendo funcionalidades de flash, cambio de cámara y temporizador. AudioFragment permite la grabación de audio, reproducción, y la gestión de archivos mediante opciones para renombrar, eliminar y compartir. GaleriaFragment se encarga de mostrar las imágenes almacenadas en la galería utilizando un diseño de cuadrícula.
 
-<p align="justify">Una vez que se le dio click en la imagen de lugar turístico que se desea conocer, se abre un activity en el que se carga el fragment correspondiente al lugar. En este fragment se muestra el título en la parte superior, seguido de una descripción breve y un video representativo. Al final tenemos un botón que nos permite regresar al mapa del país en el que visitamos el lugar para poder seguir observando otros lugares.  
-</p>
+Para el almacenamiento de archivos se utiliza la carpeta específica Music/Grabaciones para los audios y Pictures/Practica3 para las fotos, integrándose con el sistema de MediaStore para visibilidad en la galería del dispositivo.
 
-<p align="center">
-  <img src="fondo/Vallarta.jpeg" alt="Prueba" width="300" />
-</p>
+La aplicación requiere permisos de cámara, grabación de audio y acceso a almacenamiento para cumplir con sus funcionalidades de captura, grabación y compartición de contenido multimedia. Dichos permisos se justifican por la necesidad de interactuar con hardware del dispositivo y el almacenamiento externo de forma segura y conforme a las versiones de Android soportadas.
+
+En resumen, el proyecto combina captura de imágenes, grabación de audio y gestión de medios, proporcionando al usuario herramientas completas para registrar, reproducir y compartir contenido multimedia dentro de un entorno moderno de Android, cumpliendo con los estándares de diseño y seguridad recomendados.</p>
+
 
 ---
 
@@ -108,9 +94,7 @@
 
 ## Descripción de cómo se implementó la funcionalidad de cambio de tema
 
-<p align="justify">La implementación realizada consiste en un sistema para alternar entre el modo claro y el modo oscuro dentro de una aplicación Android, aprovechando el uso de SharedPreferences para mantener el estado del tema incluso después de cerrar la aplicación. Se empieza obteniendo una referencia al archivo de preferencias, desde donde se consulta un valor booleano que indica si el modo nocturno está activado o no. En función de ese valor, antes de crear la interfaz de usuario, se configura el tema global de la aplicación utilizando la clase AppCompatDelegate, la cual permite aplicar el modo claro o el modo oscuro de forma consistente en todas las actividades. 
-Después de establecer el tema, se infla el layout principal y se utiliza el botón responsable de cambiar el tema. Este botón cambia su ícono dependiendo del modo actual: si la aplicación se encuentra en modo oscuro, se muestra un ícono de sol que indica la posibilidad de volver al modo claro, mientras que si el tema activo es el claro, se muestra un ícono de luna que representa la opción de activar el modo oscuro.
-Cuando el usuario presiona el botón, se vuelve a consultar el estado almacenado en las preferencias para determinar qué acción ejecutar. Si el modo oscuro está habilitado, la aplicación cambia a modo claro mediante la función de AppCompatDelegate y actualiza el ícono para reflejar el nuevo estado. En caso contrario, se activa el modo oscuro, se cambia el ícono nuevamente y se modifica el valor guardado en SharedPreferences para que el cambio persista. Finalmente, el editor de preferencias aplica los cambios, asegurando que la próxima vez que se abra la aplicación, esta recuerde el último tema seleccionado y lo aplique automáticamente antes de cargar la interfaz. </p>
+<p align="justify"> La funcionalidad de cambio de tema se implementó permitiendo al usuario seleccionar entre tres estilos visuales predefinidos: guinda, azul y oscuro. Cada tema corresponde a un conjunto de atributos definidos en los archivos de recursos themes.xml y themes.xml (night) para manejar tanto la apariencia clara como la oscura. Al seleccionar un tema, la aplicación guarda la preferencia del usuario, generalmente mediante SharedPreferences, y aplica el estilo correspondiente a toda la actividad o fragmento, de modo que los colores principales, secundarios y de fondo se ajusten automáticamente según el tema elegido. </p>
 
 ---
 ## Ejemplo de Uso
@@ -151,11 +135,10 @@ https://github.com/user-attachments/assets/397df654-3046-4811-aed0-a5de56668449
 - [x] Pantalla de inicio
 - [x] Uso de Activities
 - [x] Uso de Fragments
-- [x] Los botones de la pantalla de inicio me dirigen a otro Activity
-- [x] Cada país tiene un Activity diferente
-- [x] Los botones de cada país me dirigen a otro Activity
-- [x] En le Activity del lugar turístico se carga el Fragment correspondiente
-- [x] Uso de Themes para el modo claro y modo oscuro
+- [x] Uso de varios themes
+- [x] Integración de cámara
+- [x] Integración de grabación de audio
+- [x] Integración de galería 
 
 ---
 
