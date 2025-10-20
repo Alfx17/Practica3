@@ -1,0 +1,36 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Practica3" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowBackground">@color/background</item>
+        <item name="colorPrimary">@color/negro</item>
+        <item name="colorPrimaryVariant">@color/guinda_ipn</item>
+        <item name="colorOnPrimary">@color/blanco</item>
+        <item name="colorSecondary">@color/azul</item>
+        <item name="colorSecondaryVariant">@color/azul_escom</item>
+        <item name="colorOnSecondary">@color/blanco</item>
+        <item name="android:textColorPrimary">@color/negro</item>
+        <item name="android:textColorSecondary">@color/negro</item>
+    </style>
+
+    <style name="Theme.Practica3" parent="Base.Theme.Practica3" />
+
+    <!-- Tema Guinda -->
+    <style name="Theme.MyApp.Guinda" parent="Theme.Practica3">
+        <item name="android:windowBackground">@color/guinda</item>
+        <item name="colorPrimary">@color/blanco</item>
+        <item name="colorPrimaryVariant">@color/guinda</item>
+        <item name="colorOnPrimary">@color/guinda</item>
+        <item name="android:textColorPrimary">@color/blanco</item>
+
+    </style>
+
+    <!-- Tema Azul -->
+    <style name="Theme.MyApp.Azul" parent="Theme.Practica3">
+        <item name="android:windowBackground">@color/azul_escom</item>
+        <item name="colorPrimary">@color/blanco</item>
+        <item name="colorPrimaryVariant">@color/azul</item>
+        <item name="colorOnPrimary">@color/azul_escom</item>
+        <item name="android:textColorPrimary">@color/blanco</item>
+
+    </style>
+</resources>

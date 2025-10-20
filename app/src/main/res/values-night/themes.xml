@@ -1,0 +1,29 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Practica3" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowBackground">@color/negro</item>
+        <item name="colorPrimary">@color/guinda_ipn</item>
+        <item name="colorPrimaryVariant">@color/guinda_ipn</item>
+        <item name="colorOnPrimary">@color/blanco</item>
+        <item name="colorSecondary">@color/azul_escom</item>
+        <item name="colorSecondaryVariant">@color/azul_escom</item>
+        <item name="colorOnSecondary">@color/blanco</item>
+        <item name="android:textColorPrimary">@color/blanco</item>
+        <item name="android:textColorSecondary">@color/blanco</item>
+    </style>
+
+    <!-- Tema Guinda (Night) -->
+    <style name="Theme.MyApp.Guinda" parent="Theme.Practica3">
+        <item name="colorPrimary">@color/guinda_ipn</item>
+        <item name="colorPrimaryVariant">@color/guinda_ipn</item>
+        <item name="colorOnPrimary">@color/blanco</item>
+    </style>
+
+    <!-- Tema Azul (Night) -->
+    <style name="Theme.MyApp.Azul" parent="Theme.Practica3">
+        <item name="colorPrimary">@color/azul_escom</item>
+        <item name="colorPrimaryVariant">@color/azul_escom</item>
+        <item name="colorOnPrimary">@color/blanco</item>
+    </style>
+
+</resources>

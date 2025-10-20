@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="negro">#FFFFFFFF</color>
+    <color name="blanco">#FF000000</color>
+    <color name="background">#FAFAFA</color>
+
+    <color name="guinda_ipn">#6B2E5F</color>
+    <color name="azul_escom">#003D6D</color>
+
+</resources>

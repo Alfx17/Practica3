@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <!-- Nombre y botón compartir en una fila -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/txtRecordingName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Grabación 1"
+            android:textSize="16sp"/>
+
+        <ImageButton
+            android:id="@+id/btnShareRecording"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@android:drawable/ic_menu_share"
+            android:contentDescription="Compartir"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="4dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtRecordingInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Duración - Fecha"
+        android:textSize="14sp"
+        android:textColor="#666"/>
+
+    <SeekBar
+        android:id="@+id/seekBarProgress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
