@@ -18,7 +18,6 @@
 - [Implementación de Temas con SharedPreferences](#implementación-de-Temas-con-SharedPreferences)
 - [Descripción de cómo se implementó la funcionalidad de cambio de tema](#descripción-de-como-se-implementó-la-funcionalidad-de-cambio-de-tema)
 - [Ejemplo de Uso](#ejemplo-de-uso)
-- [Presentación de la aplicación](#presentación-de-la-aplicación)
 - [Estado de la tarea](#estado-de-la-tarea)
 - [Características de la aplicación](#características-de-la-aplicación)
 - [Acceso al proyecto](#acceso-al-proyecto)
@@ -116,13 +115,6 @@ En resumen, el proyecto combina captura de imágenes, grabación de audio y gest
     </th>
   </tr>
 </table>
-
-
----
-
-## Presentación de la aplicación 
-
-https://github.com/user-attachments/assets/397df654-3046-4811-aed0-a5de56668449
 
 ---
 
