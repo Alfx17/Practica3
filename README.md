@@ -14,6 +14,7 @@
 - [Insignias](#insignias)
 - [Índice](#índice)
 - [Objetivo](#objetivo)
+- [Marco Teórico](#marco-teorico)
 - [Descripción del proyecto](#descripción-del-proyecto)
 - [Implementación de Temas con SharedPreferences](#implementación-de-Temas-con-SharedPreferences)
 - [Descripción de cómo se implementó la funcionalidad de cambio de tema](#descripción-de-como-se-implementó-la-funcionalidad-de-cambio-de-tema)
@@ -28,6 +29,19 @@
 
 ## Objetivo
 <p align="justify">Desarrollar aplicaciones móviles nativas para Android que interactúen directamente con los recursos del dispositivo, implementando el concepto y funcionalidad de las aplicaciones nativas.
+</p>
+
+---
+
+
+## Marco Teórico
+<h2>Aplicaciones nativas vs híbridas vs web apps</h2>
+<p align="justify">
+Las aplicaciones nativas se desarrollan específicamente para un sistema operativo (Android, iOS) usando sus lenguajes y herramientas oficiales, ofreciendo el mejor rendimiento, acceso completo al hardware y una experiencia fluida. Las híbridas utilizan tecnologías web (HTML, CSS, JavaScript) dentro de un contenedor nativo, permitiendo una sola base de código para múltiples plataformas, aunque con rendimiento intermedio. Las web apps se ejecutan en el navegador, no requieren instalación y son fáciles de actualizar, pero dependen de Internet y tienen acceso limitado a funciones del dispositivo.</p>
+<h2>Arquitectura Android y componentes principales</h2>
+<p>Android está basado en una arquitectura por capas: Linux Kernel (maneja hardware y seguridad), librerías nativas y Android Runtime (ejecuta código), framework de aplicaciones (APIs para desarrolladores) y aplicaciones del usuario. Sus componentes principales son: Activity (pantallas con interfaz), Fragment (subsecciones reutilizables de UI), Service (procesos en segundo plano), Broadcast Receiver (respuesta a eventos del sistema o apps) y Content Provider (compartir datos entre apps).</p>
+<h2>Patrones de diseño</h2>
+<p>Android promueve patrones para organizar el código de forma clara, escalable y mantenible. El más común es MVC (separación entre vista, lógica y datos), pero ha evolucionado a MVP (presentador controla la vista) y especialmente MVVM (Model-View-ViewModel), que permite una mejor gestión del ciclo de vida con LiveData y ViewModel. También se usan patrones como Singleton (una única instancia), Observer (actualización automática de datos), Repository (capa intermedia entre datos y lógica) y Dependency Injection (como Hilt o Dagger para desacoplar componentes).
 </p>
 
 ---
