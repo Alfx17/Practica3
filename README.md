@@ -38,9 +38,9 @@
 <p align="center">
   <img src="img/estilos.jpeg" alt="Prueba" width="300"/>
 </p>
-<p align="justify">Este proyecto requiere Android Studio, con soporte para Kotlin y Material3. El SDK mínimo necesario es la versión 24 (Android 7.0), mientras que la versión objetivo recomendada es la 33. Se utiliza Gradle 7.0 o superior, con dependencias de CameraX para la gestión de la cámara, MediaRecorder y MediaPlayer para grabación y reproducción de audio, y RecyclerView para la presentación de listas de elementos.
+<p align="justify">Este proyecto requiere Android Studio, con soporte para Kotlin y Material3. El SDK mínimo necesario es la versión 24 (Android 7.0), mientras que la versión objetivo recomendada es la 33. Se utiliza Gradle 7.0 o superior, con dependencias de CameraX para la gestión de la cámara, MediaRecorder y MediaPlayer para grabación y reproducción de audio, y RecyclerView para la presentación de listas de elementos.</p>
 
-La aplicación requiere permisos de cámara, grabación de audio y acceso a almacenamiento para cumplir con sus funcionalidades de captura, grabación y compartición de contenido multimedia. Dichos permisos se justifican por la necesidad de interactuar con hardware del dispositivo y el almacenamiento externo de forma segura y conforme a las versiones de Android soportadas.
+<p align="justify">La aplicación requiere permisos de cámara, grabación de audio y acceso a almacenamiento para cumplir con sus funcionalidades de captura, grabación y compartición de contenido multimedia. Dichos permisos se justifican por la necesidad de interactuar con hardware del dispositivo y el almacenamiento externo de forma segura y conforme a las versiones de Android soportadas.
 
 En resumen, el proyecto combina captura de imágenes, grabación de audio y gestión de medios, proporcionando al usuario herramientas completas para registrar, reproducir y compartir contenido multimedia dentro de un entorno moderno de Android, cumpliendo con los estándares de diseño y seguridad recomendados.</p>
 
@@ -76,6 +76,7 @@ En resumen, el proyecto combina captura de imágenes, grabación de audio y gest
 ---
 ## Ejemplo de Uso
 <p align="justify">La aplicación está diseñada con una arquitectura basada en fragmentos. CamaraFragment gestiona la captura de fotos, incluyendo funcionalidades de flash, cambio de cámara y temporizador. AudioFragment permite la grabación de audio, reproducción, y la gestión de archivos mediante opciones para renombrar, eliminar y compartir. GaleriaFragment se encarga de mostrar las imágenes almacenadas en la galería utilizando un diseño de cuadrícula.</p>
+<div align="center">
 <table style="margin-left: auto; margin-right: auto;">
   <tr>
     <th colspan="2" style="text-align: center;">Cámara</th>
@@ -88,11 +89,13 @@ En resumen, el proyecto combina captura de imágenes, grabación de audio y gest
       <img src="img/camara1.jpeg" alt="Prueba" width="300" />
     </th>
   </tr>
-</table>
+</table> 
+</div>
+
 <p align="justify">>Para el almacenamiento de archivos se utiliza la carpeta específica Music/Grabaciones para los audios y Pictures/Practica3 para las fotos, integrándose con el sistema de MediaStore para visibilidad en la galería del dispositivo.</p>
 <table style="margin-left: auto; margin-right: auto;">
   <tr>
-    <th colspan="2" style="text-align: center;">Galería</th>
+    <th colspan="4" style="text-align: center;">Galería</th>
   </tr>
   <tr>
     <th>
