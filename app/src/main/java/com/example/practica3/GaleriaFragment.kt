@@ -70,8 +70,9 @@ class GaleriaFragment : Fragment() {
 
     private fun openPhotoViewer(uri: Uri) {
         // Llama a tu PhotoViewerFragment pasando la URI de la foto
-        val frag = PhotoViewerFragment.newInstance(arrayListOf(uri.toString()), 0)
+        val frag = PhotoViewerFragment.newInstance(uri)
         frag.show(parentFragmentManager, "photo_viewer")
+
     }
 
     // Adapter interno
