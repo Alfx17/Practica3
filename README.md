@@ -92,7 +92,7 @@ En resumen, el proyecto combina captura de imágenes, grabación de audio y gest
 </table> 
 </div>
 
-<p align="justify">>Para el almacenamiento de archivos se utiliza la carpeta específica Music/Grabaciones para los audios y Pictures/Practica3 para las fotos, integrándose con el sistema de MediaStore para visibilidad en la galería del dispositivo.</p>
+<p align="justify">Para el almacenamiento de archivos se utiliza la carpeta específica Music/Grabaciones para los audios y Pictures/Practica3 para las fotos, integrándose con el sistema de MediaStore para visibilidad en la galería del dispositivo.</p>
 <table style="margin-left: auto; margin-right: auto;">
   <tr>
     <th colspan="4" style="text-align: center;">Galería</th>
